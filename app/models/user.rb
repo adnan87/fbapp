@@ -6,8 +6,6 @@ class User < ActiveRecord::Base
 
   devise :omniauthable, :omniauth_providers => [:facebook]
 
-
-  
   def self.find_for_facebook_oauth(auth,signed_in_resource=nil)
   where(auth.slice(:provider, :uid)).first_or_create do |user|
       user.provider = auth.provider
