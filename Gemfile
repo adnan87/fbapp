@@ -30,6 +30,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem "devise"
 gem 'pg'
+gem 'rspec'
 
 
 group :doc do
